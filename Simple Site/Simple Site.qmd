@@ -1,7 +1,24 @@
 ---
-title: "Simple Site"
+title: "Our first r-shinylive Quarto document!"
+filters:
+  - shinylive
 ---
 
-## Quarto
+```{shinylive-r}
+#| standalone: true
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+library(shiny)
+
+# Define your Shiny UI here
+ui <- fluidPage(
+  # Your UI components go here
+)
+
+# Define your Shiny server logic here
+server <- function(input, output, session) {
+  # Your server code goes here
+}
+
+# Create and launch the Shiny app
+shinyApp(ui, server)
+```
