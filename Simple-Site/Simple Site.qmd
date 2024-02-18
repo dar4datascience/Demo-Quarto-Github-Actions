@@ -1,5 +1,9 @@
 ---
 title: "Our first r-shinylive Quarto document!"
+format:
+  html:
+    resources: 
+      - shinylive-sw.js
 filters:
   - shinylive
 ---
