@@ -14,12 +14,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.9'
-          cache: 'pip' # caching pip dependencies
-      - run: pip install -r requirements.txt
-
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
@@ -32,6 +26,14 @@ jobs:
         uses: r-lib/actions/setup-renv@v2
         with:
           cache-version: 1
+
+      - name: Install Python Dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pip' # caching pip dependencies
+      - run: pip install -r requirements.txt
+
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
