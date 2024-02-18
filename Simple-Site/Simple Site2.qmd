@@ -5,7 +5,7 @@ filters:
   - shinylive
 ---
 
-## Demoing
+## Demoing shinylive
 
 ### Embedded Shiny application
 
